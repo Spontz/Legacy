@@ -1,0 +1,5 @@
+Esto en windows no se usa:
+
+SDLMain.h
+SDLMain.m
+

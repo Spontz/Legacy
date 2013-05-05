@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{979698DA-88F6-41AB-9E72-A867D0BA378B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>spontz_visuals_engine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\spontz\Tools\Spontz Visuals Engine\sources\fmod_ex-4.4.12\vc11_x86_32\include;C:\spontz\Tools\Spontz Visuals Engine\sources\glew-1.9.0\include;C:\spontz\Tools\Spontz Visuals Engine\sources\SDL_net\include;C:\spontz\Tools\Spontz Visuals Engine\sources\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\spontz\Tools\Spontz Visuals Engine\sources\SDL_net\lib;C:\spontz\Tools\Spontz Visuals Engine\sources\fmod_ex-4.4.12\vc11_x86_32\lib;C:\spontz\Tools\Spontz Visuals Engine\sources\glew-1.9.0\lib;C:\spontz\Tools\Spontz Visuals Engine\sources\SDL\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\spontz\Tools\Spontz Visuals Engine\sources\glew-1.9.0\include;C:\spontz\Tools\Spontz Visuals Engine\sources\SDL_net\include;C:\spontz\Tools\Spontz Visuals Engine\sources\SDL\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <SDLCheck>true</SDLCheck>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32d.lib;winmm.lib;dxguid.lib;ws2_32.lib;glu32.lib;fmodvc.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;winmm.lib;dxguid.lib;ws2_32.lib;glu32.lib;fmodex_vc.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\core\3dsdraw.c" />
+    <ClCompile Include="..\..\sources\core\3dsdrawModes.c" />
+    <ClCompile Include="..\..\sources\core\3dsload.c" />
+    <ClCompile Include="..\..\sources\core\axis.c" />
+    <ClCompile Include="..\..\sources\core\boxblur.c" />
+    <ClCompile Include="..\..\sources\core\camera.c" />
+    <ClCompile Include="..\..\sources\core\cubemap.c" />
+    <ClCompile Include="..\..\sources\core\debug.c" />
+    <ClCompile Include="..\..\sources\core\dkernel.c" />
+    <ClCompile Include="..\..\sources\core\drivers\events.c" />
+    <ClCompile Include="..\..\sources\core\drivers\exprevaldriver.c" />
+    <ClCompile Include="..\..\sources\core\drivers\fmoddriver.c" />
+    <ClCompile Include="..\..\sources\core\drivers\gldriver.c" />
+    <ClCompile Include="..\..\sources\core\drivers\netdriver.c" />
+    <ClCompile Include="..\..\sources\core\fbo.c" />
+    <ClCompile Include="..\..\sources\core\files.c" />
+    <ClCompile Include="..\..\sources\core\frustum.c" />
+    <ClCompile Include="..\..\sources\core\glslshader.c" />
+    <ClCompile Include="..\..\sources\core\highpassfilter.c" />
+    <ClCompile Include="..\..\sources\core\layers.c" />
+    <ClCompile Include="..\..\sources\core\lwoload.c" />
+    <ClCompile Include="..\..\sources\core\math3d.c" />
+    <ClCompile Include="..\..\sources\core\mouse.c" />
+    <ClCompile Include="..\..\sources\core\parse.c" />
+    <ClCompile Include="..\..\sources\core\particle.c" />
+    <ClCompile Include="..\..\sources\core\particle_sorter.cpp" />
+    <ClCompile Include="..\..\sources\core\pickcam.c" />
+    <ClCompile Include="..\..\sources\core\positioning.c" />
+    <ClCompile Include="..\..\sources\core\random.c" />
+    <ClCompile Include="..\..\sources\core\rays.c" />
+    <ClCompile Include="..\..\sources\core\rect2d.c" />
+    <ClCompile Include="..\..\sources\core\rect3d.c" />
+    <ClCompile Include="..\..\sources\core\skybox.c" />
+    <ClCompile Include="..\..\sources\core\spline.c" />
+    <ClCompile Include="..\..\sources\core\text.c" />
+    <ClCompile Include="..\..\sources\core\texture.c" />
+    <ClCompile Include="..\..\sources\core\tga.c" />
+    <ClCompile Include="..\..\sources\core\timing.c" />
+    <ClCompile Include="..\..\sources\core\viewport.cpp" />
+    <ClCompile Include="..\..\sources\effects\efxAccum.c" />
+    <ClCompile Include="..\..\sources\effects\efxBlackWhite.c" />
+    <ClCompile Include="..\..\sources\effects\efxBoxBlur.c" />
+    <ClCompile Include="..\..\sources\effects\efxFader.c" />
+    <ClCompile Include="..\..\sources\effects\efxFog.c" />
+    <ClCompile Include="..\..\sources\effects\efxGlow2.c" />
+    <ClCompile Include="..\..\sources\effects\efxHighPassFilter.c" />
+    <ClCompile Include="..\..\sources\effects\efxInverse.c" />
+    <ClCompile Include="..\..\sources\effects\efxMotionBlur.c" />
+    <ClCompile Include="..\..\sources\effects\efxMotionBlurAccum.c" />
+    <ClCompile Include="..\..\sources\effects\efxRadialBlur.c" />
+    <ClCompile Include="..\..\sources\effects\efxRadialBlur2.c" />
+    <ClCompile Include="..\..\sources\effects\efxRadialGlow.c" />
+    <ClCompile Include="..\..\sources\effects\efxRenderMesh2.c" />
+    <ClCompile Include="..\..\sources\expreval\expreval.c" />
+    <ClCompile Include="..\..\sources\expreval\exprfunc.c" />
+    <ClCompile Include="..\..\sources\expreval\exprincl.c" />
+    <ClCompile Include="..\..\sources\expreval\exprinit.c" />
+    <ClCompile Include="..\..\sources\expreval\exprint.c" />
+    <ClCompile Include="..\..\sources\expreval\exprmem.c" />
+    <ClCompile Include="..\..\sources\expreval\exprobj.c" />
+    <ClCompile Include="..\..\sources\expreval\exprpars.c" />
+    <ClCompile Include="..\..\sources\expreval\exprutil.c" />
+    <ClCompile Include="..\..\sources\expreval\exprval.c" />
+    <ClCompile Include="..\..\sources\main.c" />
+    <ClCompile Include="..\..\sources\net2\fastevents.c" />
+    <ClCompile Include="..\..\sources\net2\net2.c">
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4005;4113</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\net2\net2sets.c" />
+    <ClCompile Include="..\..\sources\net2\SDLUtils.c">
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4113</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\net2\trace.c" />
+    <ClCompile Include="..\..\sources\sections\background.c" />
+    <ClCompile Include="..\..\sources\sections\cameraSection.c" />
+    <ClCompile Include="..\..\sources\sections\cameraSection2.c" />
+    <ClCompile Include="..\..\sources\sections\cameraSection3.c" />
+    <ClCompile Include="..\..\sources\sections\fbobind.c" />
+    <ClCompile Include="..\..\sources\sections\fbounbind.c" />
+    <ClCompile Include="..\..\sources\sections\glslshaderbind.c" />
+    <ClCompile Include="..\..\sources\sections\glslshaderunbind.c" />
+    <ClCompile Include="..\..\sources\sections\image.c" />
+    <ClCompile Include="..\..\sources\sections\image2.c" />
+    <ClCompile Include="..\..\sources\sections\image2D.c" />
+    <ClCompile Include="..\..\sources\sections\imageMatrix.c" />
+    <ClCompile Include="..\..\sources\sections\imagePart.c" />
+    <ClCompile Include="..\..\sources\sections\light.c" />
+    <ClCompile Include="..\..\sources\sections\loading.c" />
+    <ClCompile Include="..\..\sources\sections\metaball.c" />
+    <ClCompile Include="..\..\sources\sections\objectMatrix.c" />
+    <ClCompile Include="..\..\sources\sections\objectMorph.c" />
+    <ClCompile Include="..\..\sources\sections\objectMorph2.c" />
+    <ClCompile Include="..\..\sources\sections\objectShader.c" />
+    <ClCompile Include="..\..\sources\sections\objectShader2.c" />
+    <ClCompile Include="..\..\sources\sections\particleMatrix2.c" />
+    <ClCompile Include="..\..\sources\sections\particleMatrix3.c" />
+    <ClCompile Include="..\..\sources\sections\particleTex2.c" />
+    <ClCompile Include="..\..\sources\sections\ray.c" />
+    <ClCompile Include="..\..\sources\sections\rayMatrix.c" />
+    <ClCompile Include="..\..\sources\sections\renderBuffer.c" />
+    <ClCompile Include="..\..\sources\sections\renderFbo.c" />
+    <ClCompile Include="..\..\sources\sections\renderShadowMapping.c" />
+    <ClCompile Include="..\..\sources\sections\saveBuffer.c" />
+    <ClCompile Include="..\..\sources\sections\sound.c" />
+    <ClCompile Include="..\..\sources\windowmng\windowmng.c" />
+    <ClCompile Include="..\SDL_net-1.2.7\SDLnet.c" />
+    <ClCompile Include="..\SDL_net-1.2.7\SDLnetselect.c" />
+    <ClCompile Include="..\SDL_net-1.2.7\SDLnetTCP.c" />
+    <ClCompile Include="..\SDL_net-1.2.7\SDLnetUDP.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\sources\core\3dsdraw.h" />
+    <ClInclude Include="..\..\sources\core\3dsdrawModes.h" />
+    <ClInclude Include="..\..\sources\core\3dsload.h" />
+    <ClInclude Include="..\..\sources\core\axis.h" />
+    <ClInclude Include="..\..\sources\core\boxblur.h" />
+    <ClInclude Include="..\..\sources\core\camera.h" />
+    <ClInclude Include="..\..\sources\core\cmdlib.h" />
+    <ClInclude Include="..\..\sources\core\cubemap.h" />
+    <ClInclude Include="..\..\sources\core\debug.h" />
+    <ClInclude Include="..\..\sources\core\disk.h" />
+    <ClInclude Include="..\..\sources\core\dkernel.h" />
+    <ClInclude Include="..\..\sources\core\drivers\events.h" />
+    <ClInclude Include="..\..\sources\core\drivers\exprevaldriver.h" />
+    <ClInclude Include="..\..\sources\core\drivers\fmoddriver.h" />
+    <ClInclude Include="..\..\sources\core\drivers\gldriver.h" />
+    <ClInclude Include="..\..\sources\core\drivers\netdriver.h" />
+    <ClInclude Include="..\..\sources\core\fbo.h" />
+    <ClInclude Include="..\..\sources\core\files.h" />
+    <ClInclude Include="..\..\sources\core\frustum.h" />
+    <ClInclude Include="..\..\sources\core\glslshader.h" />
+    <ClInclude Include="..\..\sources\core\highpassfilter.h" />
+    <ClInclude Include="..\..\sources\core\layers.h" />
+    <ClInclude Include="..\..\sources\core\math3d.h" />
+    <ClInclude Include="..\..\sources\core\mouse.h" />
+    <ClInclude Include="..\..\sources\core\parse.h" />
+    <ClInclude Include="..\..\sources\core\particle.h" />
+    <ClInclude Include="..\..\sources\core\pickcam.h" />
+    <ClInclude Include="..\..\sources\core\platform.h" />
+    <ClInclude Include="..\..\sources\core\positioning.h" />
+    <ClInclude Include="..\..\sources\core\random.h" />
+    <ClInclude Include="..\..\sources\core\rays.h" />
+    <ClInclude Include="..\..\sources\core\rect2d.h" />
+    <ClInclude Include="..\..\sources\core\rect3d.h" />
+    <ClInclude Include="..\..\sources\core\section.hpp" />
+    <ClInclude Include="..\..\sources\core\skybox.h" />
+    <ClInclude Include="..\..\sources\core\spline.h" />
+    <ClInclude Include="..\..\sources\core\text.h" />
+    <ClInclude Include="..\..\sources\core\texture.h" />
+    <ClInclude Include="..\..\sources\core\tga.h" />
+    <ClInclude Include="..\..\sources\core\timing.h" />
+    <ClInclude Include="..\..\sources\core\viewport.h" />
+    <ClInclude Include="..\..\sources\expreval\expreval.h" />
+    <ClInclude Include="..\..\sources\expreval\exprincl.h" />
+    <ClInclude Include="..\..\sources\expreval\exprinit.h" />
+    <ClInclude Include="..\..\sources\expreval\exprint.h" />
+    <ClInclude Include="..\..\sources\expreval\exprmem.h" />
+    <ClInclude Include="..\..\sources\interface\demo.h" />
+    <ClInclude Include="..\..\sources\interface\sections.h" />
+    <ClInclude Include="..\..\sources\main.h" />
+    <ClInclude Include="..\..\sources\net2\fastevents.h" />
+    <ClInclude Include="..\..\sources\net2\net2.h" />
+    <ClInclude Include="..\..\sources\net2\net2sets.h" />
+    <ClInclude Include="..\..\sources\net2\queue.h" />
+    <ClInclude Include="..\..\sources\net2\SDLUtils.h" />
+    <ClInclude Include="..\..\sources\net2\set.h" />
+    <ClInclude Include="..\..\sources\net2\trace.h" />
+    <ClInclude Include="..\..\sources\windowmng\windowmng.h" />
+    <ClInclude Include="..\SDL_net-1.2.7\SDLnetsys.h" />
+    <ClInclude Include="..\SDL_net-1.2.7\SDL_net.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SDL-1.2.15\VisualC\SDL\SDL.vcxproj">
+      <Project>{81ce8daf-ebb2-4761-8e45-b71abcca8c68}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SDL_image-1.2.12\VisualC\SDL_image.vcxproj">
+      <Project>{2bd5534e-00e2-4bea-ac96-d9a92ea24696}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

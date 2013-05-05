@@ -1,0 +1,33 @@
+Inferno 2.0
+Network Protocol description
+
+*** COMMANDS **********
+Put the engine in play mode
+command::play
+
+Put the engine en pause mode
+command::pause
+
+Restart the engine
+command::restart
+
+Set the playable start time to 30.25 seconds
+command::startTime::30.25
+
+Set the current playing time to 32 seconds
+command::currentTime::32
+
+Set the playable end time to 35.89 seconds
+command::endTime::35.89
+
+*** SECTIONS **********
+Create a new section (In this example, an efxFader)
+section::new::[efxFader]
+; Unique identifier
+id 1start 0end 10layer 300param 1 0 0 0.3param 1 0 0 0.3
+
+Disable an existing section identified by 9384
+section::disable::9384
+
+Toggle the enabled state of an existing section identified by 9384
+section::toggle::9384

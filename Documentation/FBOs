@@ -1,0 +1,86 @@
+1- De que va / porque el cambio?
+    Básicamente hasta ahora teniamos FBO's de tipo RGBA, pero para ciertos efectos (HDR, occlussion, ...), se necesita otro tipo de texturas, el problema que habia hasta ahora es que se creaban 10 FBO's por defecto, de un tamaño hardcodeado, y de un formato hardcodeado (RGBA).
+    Con el cambio hecho, ahora se puede definir el tamaño y el formato de las FBO's desde el archivo de configuración.
+    
+2- Como definir las FBO's?
+    Necesitamos definir 3 parámetros: Width, height y Formato (tipo de textura).
+    Todo se hace desde el 'graphics.spo', por lo tanto, MERLU! tendras que añadirlo en el code del editor... he mirado el code del editor y creo que se ha de añadir al método 'WriteGraphicsSPO' pero no quiero tocarlo porque tu controlas mucho mas que yo en temas del editor :)
+    Ejemplo del 'graphics.spo':
+    
+    gl_fullscreen 0
+    (...)
+    texture_detail 5
+    
+    fbo_0_width 64
+    fbo_0_height 64
+    fbo_0_format RGBA
+    
+    fbo_1_width 128
+    fbo_1_height 512
+    fbo_1_format RGB
+    
+    fbo_2_width 1024
+    fbo_2_height 1024
+    fbo_2_format RGBA16F
+
+    fbo_3_width 0
+    fbo_3_height 0
+    fbo_3_format RGBA16F
+    
+    Como veis, en este ejemplo tenemos 3 FBO's libres para usar:
+    0: De 64x64, tipo RGBA
+    1: De 128x512, tipo RGB
+    2: De 1024x1024, tipo RGBA16F
+    3: Como es de 0x0 el sistema no la creará, vamos, si se pone a 0x0 no se crea.
+
+    Os adjunto un control.spo que es 100% funcional.
+
+3- Limitaciones
+    - Se pueden definir hasta 20 fbo's, si queremos poner más, hay que tocar el code (ver siguiente sección).
+    - El formato de las texturas soportado está definido en el codigo (ver siguiente seccion sobre como aumentar los formatos soportados).
+    
+4- Mantenimiento
+    - Aumentar el número de FBO's disponibles (20):
+        1) Fichero: dkernel.h, cambiar el 'define' --> #define FBO_BUFFERS            20
+        2) Fichero: dkernel.c, aumentar los parámetros, para poder leer más de 20 fbo's:
+            {"fbo_20_width",    VTYPE_INT,            &glDriver.fbo[20].width            },
+            {"fbo_20_height",    VTYPE_INT,            &glDriver.fbo[20].height        },
+            {"fbo_20_format",    VTYPE_STRING,        &glDriver.fbo[20].format        },
+            (etc...)
+    - Aumentar los formatos soportados:
+        Fichero: dkernel.c -> Los formatos se encuentran definidos en una tabla:
+        #define TEXTURE_MODE 6
+        glTexTable_t textureModes[TEXTURE_MODE] = {
+            { "RGBA",                GL_RGBA8,        GL_RGBA,    GL_UNSIGNED_BYTE },
+            { "RGB",                GL_RGB8,        GL_RGB,        GL_UNSIGNED_BYTE },
+            { "RGBA16F",            GL_RGBA16F_ARB,    GL_RGBA,    GL_FLOAT },
+            { "RGB16F",                GL_RGB16F_ARB,    GL_RGB,        GL_FLOAT },
+            { "RGBA32F",            GL_RGBA32F_ARB,    GL_RGBA,    GL_FLOAT},
+            { "RGB32F",                GL_RGB32F_ARB,    GL_RGB,        GL_FLOAT},
+        };
+        Esta tabla guarda:
+        Param 1: Como se llama desde el script
+        Param 2: Formato interno (parámetro de OpenGL)
+        Param 3: Formato (parámetro de OpenGL)
+        Param 4: Tipo (parámetro de OpenGL)
+        Por tanto, si quiero añadir un nuevo formato, tendré que añadir una nueva entrada en la tabla, por ejemplo:
+        #define TEXTURE_MODE 7
+        glTexTable_t textureModes[TEXTURE_MODE] = {
+            { "RGBA",                GL_RGBA8,        GL_RGBA,    GL_UNSIGNED_BYTE },
+            { "RGB",                GL_RGB8,        GL_RGB,        GL_UNSIGNED_BYTE },
+            { "RGBA16F",            GL_RGBA16F_ARB,    GL_RGBA,    GL_FLOAT },
+            { "RGB16F",                GL_RGB16F_ARB,    GL_RGB,        GL_FLOAT },
+            { "RGBA32F",            GL_RGBA32F_ARB,    GL_RGBA,    GL_FLOAT},
+            { "RGB32F",                GL_RGB32F_ARB,    GL_RGB,        GL_FLOAT},
+            { "RGB32KAKA",            GL_RGB32KAKA_ARB,GL_RGBKK,    GL_KAKA},
+        };
+
+5- Issues
+    - Al usar una textura tipo RGBA32F se ve todo negro... no se cual es el problema pero al usar esta textura no se ve nada, quiza ese formato se usa solo para traspaso de datos... no lo se, la verdad... tengo que investigar más, pero lo que está claro es que los formatos RGB, RGBA y 16F funcionan sin problemas... quiza es que mi gráfica no soporta el formato RGBA32F (ati suxxxx).... (tu sabes algo isaac?)
+
+6- Mejoras (TO DO)
+    - El tamaño de la textura podría usarse de una fórmula, de modo que pudiésemos definir el tamaño de una textura del palo:
+        fbo_0_width rttwidth/2
+        fbo_0_height rttheight/4
+        fbo_0_format RGBA
+    Eso estaría bien... pero por ahora no es imprescindible, ademas implicaría usar el 'formuleitor' de merlucin... y eso no es moco de pavo :D

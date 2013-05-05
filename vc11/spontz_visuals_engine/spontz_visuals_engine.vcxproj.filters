@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="sections">
+      <UniqueIdentifier>{2437829e-d486-4e7f-bd96-efbab05f9f84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{e1eb07f6-7af1-480c-a249-229dc043e876}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\drivers">
+      <UniqueIdentifier>{54b92a27-8d89-491d-905d-09a8bc3f5ffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{f6b9df90-1937-4b48-9720-c305609ed31b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windowmng">
+      <UniqueIdentifier>{3494f9f8-4623-4355-8d3f-dd46903b2fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rd party">
+      <UniqueIdentifier>{e5c7eacd-efa6-4ff2-88a0-9b1154fa204a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rd party\expreval">
+      <UniqueIdentifier>{f55284cf-6daa-4f07-9d04-d01015845f84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="effects">
+      <UniqueIdentifier>{1650cc55-458b-4a12-b28f-f34d710f1a9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rd party\net2">
+      <UniqueIdentifier>{8b9d7cb1-b593-4ff8-ba5f-7498128e8376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rd party\sdl_net">
+      <UniqueIdentifier>{6e292591-f702-4b5f-9bc4-624abab5a848}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\sections\background.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\cameraSection.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\cameraSection2.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\cameraSection3.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\fbobind.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\fbounbind.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\glslshaderbind.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\glslshaderunbind.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\image.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\image2.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\image2D.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\imageMatrix.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\imagePart.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\light.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\loading.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\metaball.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\objectMatrix.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\objectMorph.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\objectMorph2.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\objectShader.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\objectShader2.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\particleMatrix2.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\particleMatrix3.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\particleTex2.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\ray.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\rayMatrix.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\renderBuffer.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\renderFbo.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\renderShadowMapping.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\saveBuffer.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\sections\sound.c">
+      <Filter>sections</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\3dsdraw.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\3dsdrawModes.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\3dsload.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\axis.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\boxblur.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\camera.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\cubemap.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\debug.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\dkernel.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\fbo.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\files.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\frustum.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\glslshader.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\highpassfilter.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\layers.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\lwoload.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\math3d.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\mouse.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\parse.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\particle.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\particle_sorter.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\pickcam.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\positioning.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\random.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\rays.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\rect2d.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\rect3d.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\skybox.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\spline.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\text.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\texture.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\tga.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\timing.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\viewport.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\drivers\events.c">
+      <Filter>core\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\drivers\exprevaldriver.c">
+      <Filter>core\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\drivers\fmoddriver.c">
+      <Filter>core\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\drivers\gldriver.c">
+      <Filter>core\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\core\drivers\netdriver.c">
+      <Filter>core\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\expreval.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprfunc.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprincl.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprinit.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprint.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprmem.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprobj.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprpars.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprutil.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\expreval\exprval.c">
+      <Filter>3rd party\expreval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\windowmng\windowmng.c">
+      <Filter>windowmng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\main.c" />
+    <ClCompile Include="..\..\sources\effects\efxAccum.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxBlackWhite.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxBoxBlur.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxFader.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxFog.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxGlow2.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxHighPassFilter.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxInverse.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxMotionBlur.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxMotionBlurAccum.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxRadialBlur.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxRadialBlur2.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxRadialGlow.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\effects\efxRenderMesh2.c">
+      <Filter>effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\net2\fastevents.c">
+      <Filter>3rd party\net2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\net2\net2.c">
+      <Filter>3rd party\net2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\net2\net2sets.c">
+      <Filter>3rd party\net2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\net2\SDLUtils.c">
+      <Filter>3rd party\net2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\net2\trace.c">
+      <Filter>3rd party\net2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDL_net-1.2.7\SDLnet.c">
+      <Filter>3rd party\sdl_net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDL_net-1.2.7\SDLnetselect.c">
+      <Filter>3rd party\sdl_net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDL_net-1.2.7\SDLnetTCP.c">
+      <Filter>3rd party\sdl_net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SDL_net-1.2.7\SDLnetUDP.c">
+      <Filter>3rd party\sdl_net</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\sources\core\3dsdraw.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\3dsdrawModes.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\3dsload.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\axis.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\boxblur.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\camera.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\cmdlib.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\cubemap.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\debug.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\disk.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\dkernel.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\fbo.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\files.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\frustum.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\glslshader.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\highpassfilter.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\layers.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\math3d.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\mouse.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\parse.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\particle.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\pickcam.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\platform.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\positioning.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\random.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\rays.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\rect2d.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\rect3d.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\section.hpp">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\skybox.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\spline.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\text.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\texture.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\tga.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\timing.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\viewport.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\drivers\events.h">
+      <Filter>core\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\drivers\exprevaldriver.h">
+      <Filter>core\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\drivers\fmoddriver.h">
+      <Filter>core\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\drivers\gldriver.h">
+      <Filter>core\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\core\drivers\netdriver.h">
+      <Filter>core\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\expreval\expreval.h">
+      <Filter>3rd party\expreval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\expreval\exprincl.h">
+      <Filter>3rd party\expreval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\expreval\exprinit.h">
+      <Filter>3rd party\expreval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\expreval\exprint.h">
+      <Filter>3rd party\expreval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\expreval\exprmem.h">
+      <Filter>3rd party\expreval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\interface\demo.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\interface\sections.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\windowmng\windowmng.h">
+      <Filter>windowmng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\main.h" />
+    <ClInclude Include="..\..\sources\net2\fastevents.h">
+      <Filter>3rd party\net2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\net2\net2.h">
+      <Filter>3rd party\net2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\net2\net2sets.h">
+      <Filter>3rd party\net2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\net2\queue.h">
+      <Filter>3rd party\net2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\net2\SDLUtils.h">
+      <Filter>3rd party\net2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\net2\set.h">
+      <Filter>3rd party\net2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sources\net2\trace.h">
+      <Filter>3rd party\net2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDL_net-1.2.7\SDL_net.h">
+      <Filter>3rd party\sdl_net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDL_net-1.2.7\SDLnetsys.h">
+      <Filter>3rd party\sdl_net</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
